@@ -1,0 +1,20 @@
+name: ha-control
+version: "1.0"
+slug: ha_control
+description: Home Assistant Add-on for controlling entities via HTTP
+startup: application
+boot: auto
+hassio_api: false
+host_network: true
+options:
+  ha_token: "REPLACE_WITH_YOUR_TOKEN"
+  ha_entity: "switch.mersun_lamppari_socket_1"
+  ha_url: "https://oravat.duckdns.org:8123"
+schema:
+  ha_token: str
+  ha_entity: str
+  ha_url: str
+environment:
+  HA_TOKEN: "{ha_token}"
+  HA_ENTITY: "{ha_entity}"
+  HA_URL: "{ha_url}"
